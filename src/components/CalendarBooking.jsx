@@ -20,7 +20,6 @@ const CalendarBooking = ({ expert, initialBookedSlots }) => {
     const [error, setError] = useState(null);
     const [notes, setNotes] = useState('');
 
-    
     const [guestName, setGuestName] = useState('');
     const [guestEmail, setGuestEmail] = useState('');
     const [guestPhone, setGuestPhone] = useState('');
@@ -30,13 +29,10 @@ const CalendarBooking = ({ expert, initialBookedSlots }) => {
         const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
         const socket = io(BACKEND_URL);
 
-        
         socket.emit('joinExpertRoom', expert._id);
 
-        
         socket.on('slotBooked', (payload) => {
-            
-            
+
             setBookedSlots(prev => [...prev, payload]);
         });
 
@@ -45,7 +41,6 @@ const CalendarBooking = ({ expert, initialBookedSlots }) => {
         };
     }, [expert._id]);
 
-    
     const renderHeader = () => {
         return (
             <div className="calendar-header">
@@ -90,7 +85,6 @@ const CalendarBooking = ({ expert, initialBookedSlots }) => {
                 formattedDate = format(day, 'd');
                 const cloneDay = day;
 
-                
                 const isPast = isBefore(day, today);
                 const dayOfWeek = day.getDay(); 
                 const isAvailableDay = expert.availability.days.includes(dayOfWeek);
@@ -121,7 +115,6 @@ const CalendarBooking = ({ expert, initialBookedSlots }) => {
         return <div className="calendar-body">{rows}</div>;
     };
 
-    
     const generateTimeSlots = () => {
         if (!selectedDate) return [];
 
@@ -129,11 +122,9 @@ const CalendarBooking = ({ expert, initialBookedSlots }) => {
         const { startHour, endHour } = expert.availability;
         const dateStr = format(selectedDate, 'yyyy-MM-dd');
 
-        
         for (let i = startHour; i < endHour; i++) {
             const slotStr = `${i.toString().padStart(2, '0')}:00-${(i + 1).toString().padStart(2, '0')}:00`;
 
-            
             const isBooked = bookedSlots.some(b => b.date === dateStr && b.timeSlot === slotStr);
 
             slots.push({

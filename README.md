@@ -2,21 +2,18 @@
 
 A premium, modern React application for booking professional expert sessions.
 
-## ✨ Features
-- **Premium Design System**: Stunning dark mode interface with glassmorphism and smooth animations.
+## Functionalities
 - **Global Search**: Search for experts directly from the navigation bar.
-- **Real-time Availability**: Instant feedback on booked slots via Socket.IO.
-- **Responsive Layout**: Optimized for desktop, tablet, and mobile browsers.
+- **Real-time Availability**: Instant feedback on booked slots with Socket.IO.
+- **Responsive Layout**: Responsive for desktop, tablet, and mobile browsers.
 - **Guest Bookings**: Simplified booking flow without forced authentication.
 
 ## 🛠 Tech Stack
-- **Framework**: React 19 (Vite)
-- **Routing**: React Router 7
-- **Icons**: Lucide React
-- **Styling**: Modern CSS3 with CSS Variables
-- **API Client**: Axios
+- **Framework**: Vite
+- **Styling**:  CSS3 
+- **API Client**: Axios to communicate with the backend
 
-## 📦 Setup & Installation
+## Setup & Installation
 
 1. **Clone the repository**:
    ```bash
@@ -32,6 +29,8 @@ A premium, modern React application for booking professional expert sessions.
 3. **Configure Environment**:
    Create a `.env` file in the root directory:
    ```env
+   cp .env.example .env
+   
    VITE_BACKEND_URL=http://localhost:5000/api
    ```
 
@@ -40,7 +39,4 @@ A premium, modern React application for booking professional expert sessions.
    npm run dev
    ```
 
-## 🎨 Design Principles
-- **Aesthetics**: Focused on professional, rich visuals and interactive feedback.
-- **UX**: Prioritizes ease of discovery with the Expert Grid as the primary landing page.
-- **Performance**: Lightweight and fast with optimized assets and React states.
+**Live url** https://expertsyncfrontend.vercel.app/

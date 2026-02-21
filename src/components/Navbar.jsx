@@ -9,7 +9,6 @@ const Navbar = () => {
     const [searchParams] = useSearchParams();
     const [searchQuery, setSearchQuery] = useState(searchParams.get('search') || '');
 
-    
     useEffect(() => {
         setSearchQuery(searchParams.get('search') || '');
     }, [searchParams]);
