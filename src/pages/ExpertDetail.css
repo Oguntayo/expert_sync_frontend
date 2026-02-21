@@ -1,0 +1,157 @@
+.expert-detail-container {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+}
+
+.btn-back:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.expert-detail-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .expert-detail-layout {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+
+.expert-profile {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+}
+
+.profile-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-category {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.profile-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profile-info h1 {
+    font-size: 2rem;
+}
+
+.profile-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.meta-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-bio h3,
+.profile-schedule h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.profile-bio p,
+.profile-schedule p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+
+.booking-section {
+    padding: 2rem;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-header {
+    margin-bottom: 2rem;
+}
+
+.booking-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-secondary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.booking-header p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.placeholder-calendar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    color: var(--text-muted);
+}
+
+.placeholder-icon {
+    color: var(--accent-primary);
+    opacity: 0.5;
+}
+
+.small-text {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}

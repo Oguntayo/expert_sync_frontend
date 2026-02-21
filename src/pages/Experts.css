@@ -1,0 +1,229 @@
+.experts-container {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.experts-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.experts-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.experts-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.experts-controls-minimal {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-md);
+}
+
+.filter-icon {
+    color: var(--text-muted);
+}
+
+.filters select {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.filters select option {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+
+.experts-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 640px) {
+    .experts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .experts-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+.expert-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: var(--glass-border);
+}
+
+.expert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.expert-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+    
+    overflow: hidden;
+}
+
+.expert-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.expert-card:hover .expert-image {
+    transform: scale(1.05);
+}
+
+.expert-category-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.expert-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.expert-info h3 {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.expert-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.star-icon {
+    color: var(--warning);
+    fill: var(--warning);
+}
+
+.expert-bio {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.btn-pagination {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+}
+
+.btn-pagination:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-pagination:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.page-indicator {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 6rem 2rem;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.empty-icon {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    opacity: 0.6;
+}
+
+.empty-state h3 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.empty-state p {
+    font-size: 1rem;
+    max-width: 450px;
+    line-height: 1.6;
+}
